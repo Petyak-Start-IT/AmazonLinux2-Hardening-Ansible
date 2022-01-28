@@ -1,0 +1,38 @@
+# Standards: 0.11
+---
+
+# 3.2.2 Ensure ICMP redirects are not accepted
+
+- name: 3.2.2 - Ensure ICMP redirects are not accepted
+  sysctl:
+    ignoreerrors: yes
+    name: "{{ item }}"
+    value: 0
+    state: present
+    sysctl_set: yes
+  with_items:
+    - "net.ipv4.conf.all.accept_redirects"
+    - "net.ipv4.conf.default.accept_redirects"
+    - "net.ipv6.conf.all.accept_redirects"
+    - "net.ipv6.conf.default.accept_redirects"
+  tags:
+    - level-1
+    - section-3
+    - "3.2.2"
+    - scored
+
+- name: 3.2.2 - Ensure source routed packets are not accepted in active kernel parameters
+  sysctl:
+    name: "{{ item }}" 
+    value: '1'
+    state: present
+    sysctl_set: yes
+  with_items:
+      - net.ipv4.route.flush
+      - net.ipv6.route.flush
+  tags:
+      - level-1
+      - section-3
+      - "3.2.2"
+      - scored
+

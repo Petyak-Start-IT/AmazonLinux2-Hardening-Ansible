@@ -1,0 +1,27 @@
+# Standards: 0.11
+---
+
+# 3.6 Disable IPv6
+- name: 3.6 Ensure that IPv6 is disabled
+  command: "grep ipv6 /etc/default/grub"
+  register: ipv6
+  changed_when: False
+  ignore_errors: true
+  tags:
+    - "3.6"
+    - level-2
+    - section-4
+    - not-scored
+
+- name: 3.6 Disabling IPv6
+  replace:
+    path: /etc/default/grub
+    regexp: 'console=tty0'
+    replace: "ipv6.disable=1 console=tty0"
+  when: "'ipv6.disable=1' not in ipv6.stdout"
+  notify: Update grub
+  tags:
+    - "3.6"
+    - level-2
+    - section-4
+    - not-scored
