@@ -14,7 +14,7 @@
     - scored
 
 - name: 4.1.2 Ensure auditd service is enabled (Scored)
-  service:
+  systemd:
     name: "auditd"
     enabled: true
     state: started
