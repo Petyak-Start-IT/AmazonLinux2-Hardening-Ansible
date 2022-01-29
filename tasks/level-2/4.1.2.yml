@@ -16,7 +16,7 @@
 - name: 4.1.2 Ensure auditd service is enabled (Scored)
   systemd:
     name: "auditd"
-#    enabled: true
+    enabled: true
     state: started
   when: "auditd_4_1_2.rc is not defined or auditd_4_1_2.rc == 0"
   ignore_errors: false
