@@ -22,7 +22,8 @@
     state: restarted
 
 - name: Merge audit rule files
-  command: augenrules --load
+  command: echo "Merge audit rule files"
+#  command: augenrules --load
   ignore_errors: yes
 
 - name: Update grub
