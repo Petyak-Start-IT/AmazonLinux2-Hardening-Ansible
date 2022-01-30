@@ -15,12 +15,12 @@
     - /etc/bashrc
     - /etc/profile
     - /etc/profile.d/colorgrep.sh
-    - /etc/profile.d/which2.sh
+#    - /etc/profile.d/which2.sh
     - /etc/profile.d/less.sh
     - /etc/profile.d/colorls.sh
-    - /etc/profile.d/256term.sh
-    - /etc/profile.d/lang.sh
-    - /etc/profile.d/bash_completion.sh
+#    - /etc/profile.d/256term.sh
+#    - /etc/profile.d/lang.sh
+#    - /etc/profile.d/bash_completion.sh
   tags:
     - level-1
     - section-5
