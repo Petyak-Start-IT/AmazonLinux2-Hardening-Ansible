@@ -24,7 +24,7 @@
       - 3.5.2.1 # Ensure IPv6 default deny firewall policy
 
     cis_level_2_exclusions:
-      - 6.1.1   # Audit system file permissions 
+      # - 6.1.1   # Audit system file permissions 
       - 1.6.1.1 # Install and ensure SELinux is not disabled 
       - 1.6.1.2 # Setup selinux
       - 1.6.1.3 # Setup selinux
