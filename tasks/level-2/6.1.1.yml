@@ -6,6 +6,7 @@
 - name: 6.1.1 - Audit system file permissions
   command: rpm -Va --nomtime --nosize --nomd5 --nolinkto
   register: audit_6_1_1
+  ignore_errors: true
   tags:
     - level-2
     - section-6
