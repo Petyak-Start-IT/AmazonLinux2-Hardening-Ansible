@@ -36,6 +36,7 @@
       - 3.3.2   # Ensure /etc/hosts.allow is configured
       - 3.3.3   # Check if /etc/hosts.deny configuration file exists
       - 3.5.1.1 # Ensure default deny firewall policy(DROP INPUT)
+      - 3.5.1.2 # Ensure IPv4 loopback traffic is configured
       - 3.5.1.4 # Ensure firewall rules exist for accepting SSH connections
       - 3.5.2.1 # Ensure IPv6 default deny firewall policy
       - 3.5.2.2 # Ensure IPv6 loopback traffic is configured
