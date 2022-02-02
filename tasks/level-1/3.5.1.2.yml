@@ -3,7 +3,7 @@
 
  # 3.5.1.2 Ensure IPv4 loopback traffic is configured
   
-  - name: 3.5.2.2 - Ensure IPv4 loopback traffic is configured
+  - name: 3.5.1.2 - Ensure IPv4 loopback traffic is configured
     iptables:
       action: append
       chain: INPUT

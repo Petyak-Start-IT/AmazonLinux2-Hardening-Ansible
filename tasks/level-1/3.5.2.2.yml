@@ -18,7 +18,7 @@
       - "3.5.2.2"
       - scored
       
-  - name: 3.5.1.2 - Ensure loopback traffic is configured(-o lo)
+  - name: 3.5.2.2 - Ensure loopback traffic is configured(-o lo)
     iptables:
       action: append
       chain: OUTPUT
@@ -33,7 +33,7 @@
       - "3.5.2.2"
       - scored
   
-  - name: 3.5.1.2 - Ensure loopback traffic is configured(-i 127.0.0.1/8)
+  - name: 3.5.2.2 - Ensure loopback traffic is configured(-i 127.0.0.1/8)
     iptables:
       action: append
       chain: INPUT
