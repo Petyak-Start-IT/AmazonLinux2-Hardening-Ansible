@@ -35,13 +35,13 @@
     - "1.5.1"
     - scored
 
-- name: 1.5.1 - Prevent suid programs from dumping core
-  sysctl:
-    ignoreerrors: yes
-    name: fs.suid_dumpable
-    value: 0
-    state: present
-  tags:
-    - level-1
-    - "1.5.1"
-    - scored
+# - name: 1.5.1 - Prevent suid programs from dumping core
+#   sysctl:
+#     ignoreerrors: yes
+#     name: fs.suid_dumpable
+#     value: 0
+#     state: present
+#   tags:
+#     - level-1
+#     - "1.5.1"
+#     - scored
