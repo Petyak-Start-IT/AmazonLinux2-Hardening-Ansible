@@ -44,10 +44,14 @@
       - 3.5.1.4 # Ensure firewall rules exist for accepting SSH connections
       - 3.5.2.1 # Ensure IPv6 default deny firewall policy
       - 3.5.2.2 # Ensure IPv6 loopback traffic is configured
-      - 4.2.1.1
+      - 4.2.1.1 # Ensure rsyslog Service is enabled
+      - 4.2.1.2 # Ensure logging is configured (WARNING - This check has not been implemented yet)
+      - 4.2.1.3 # Ensure rsyslog default file permissions configured
+      - 4.2.1.4 # Ensure rsyslog is configured to send logs to a remote log host
+      - 4.2.1.5 # Ensure remote rsyslog messages are only accepted on designated log hosts
+      - 4.2.2.1 # Check if syslog-ng is installed
       - 5.1.1
       - 5.2.13
-      
       - 5.2.14
       - 5.2.15
       - 5.2.16
