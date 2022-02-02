@@ -20,7 +20,7 @@
       - 1.1.16 # Ensure nosuid option set on /dev/shm partition !runtime task!
       - 1.1.17 # Ensure noexec option set on /dev/shm partition !runtime task!
       - 1.5.2  # Ensure address space layout randomization (ASLR) is enabled
-      - 2.1.1.2
+      - 2.1.1.2 # Ensure ntp is enabled/started
       - 3.1.2  # Ensure packet redirect sending is disabled
       - 3.2.1  # Ensure source routed packets are not accepted
       - 3.2.2  # Ensure ICMP redirects are not accepted
@@ -32,7 +32,7 @@
       - 3.2.8  # Ensure TCP SYN Cookies is enabled
       - 3.2.9  # Ensure IPv6 router advertisements are not accepted
     # Firewall rules and locks us out at a point
-      - 3.1.1
+      - 3.1.1   # Ensure IP forwarding is disabled
       - 3.3.2   # Ensure /etc/hosts.allow is configured
       - 3.3.3   # Check if /etc/hosts.deny configuration file exists
       - 3.5.1.1 # Ensure default deny firewall policy(DROP INPUT)
@@ -45,15 +45,14 @@
       - 4.2.1.4 # Ensure rsyslog is configured to send logs to a remote log host
       - 4.2.1.5 # Ensure remote rsyslog messages are only accepted on designated log hosts
       - 4.2.2.1 # Check if syslog-ng is installed
-      - 5.1.1
-      - 5.2.13
-      - 5.2.14
-      - 5.2.15
-      - 5.2.16
-      - 5.2.17
-      - 5.2.18
-      - 5.2.19
-    # Firewall rules and locks us out at a point
+      - 5.1.1   # Ensure cron is installed and enabled
+      - 5.2.13  # Ensure only approved ciphers are used for SSH !do we need this!
+      - 5.2.14  # Ensure only approved MAC algorithms are used for SSH !do we need this!
+      - 5.2.15  # Ensure only approved MAC algorithms are used for SSH !do we need this!
+      - 5.2.16  # Ensure SSH Client Alive Interval is configured !do we need this!
+      - 5.2.17  # Ensure SSH LoginGraceTime is set to one minute or less !do we need this!
+      - 5.2.18  # Ensure SSH access is limited !do we need this!
+      - 5.2.19  # Ensure SSH warning banner is configured !do we need this!
 
     cis_level_2_exclusions:
       - 1.6.1.1 # Install and ensure SELinux is not disabled 
